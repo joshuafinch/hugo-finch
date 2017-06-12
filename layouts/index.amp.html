@@ -1,0 +1,7 @@
+{{ partial "header.amp.html" . -}}
+
+    {{- range .Site.Pages }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{- end}}
+
+{{ partial "footer.html" . -}}

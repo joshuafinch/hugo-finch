@@ -1,7 +1,10 @@
 <!doctype html>
-<html>
+<html ⚡>
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
     <meta charset="utf-8">
+    {{ partial "amp.html" . }}
+
+    <!-- <link rel="canonical" href="{{ .RelPermalink }}" /> -->
 
     <title>{{ .Title }}</title>
 
