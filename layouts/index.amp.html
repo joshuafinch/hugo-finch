@@ -1,7 +1,9 @@
 {{ partial "header.amp.html" . -}}
 
-    {{- range .Site.Pages }}
+    {{- $paginator := .Paginate (where .Data.Pages "Type" "post") 5 }}
+    {{- range $paginator.Pages }}
     <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-    {{- end}}
+    {{- end }}
+    {{- partial "nextprevious.html" . }}
 
 {{ partial "footer.html" . -}}
