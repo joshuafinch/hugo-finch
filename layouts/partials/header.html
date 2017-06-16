@@ -3,6 +3,10 @@
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
     <meta charset="utf-8">
 
+    {{ range .AlternativeOutputFormats -}}
+    <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
+    {{ end }}
+
     <title>{{ .Title }}</title>
 
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -12,8 +16,10 @@
 {{ partial "opengraph.html" . }}
 {{ partial "favicon.html" . }}
 
-    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
-    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <style>
+        {{ partial "style.html" . | safeCSS }}
+    </style>
+
 </head>
 <body>
     <header>

@@ -1,17 +1,15 @@
 {{ partial "header.html" . -}}
 
-  <main>
-    <article>
-      <header>
-          <h1>{{ .Title }}</h1>
-          <p><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Mon, Jan 2, 2006" }}</time></p>
-      </header>
-      <section>
-      {{ .Content }}
-      </section>
-    </article>
-  </main>
-
-  <h4><a href="{{ .Site.BaseURL }}">Home</a></h4>
+    <main>
+      <article>
+        <header>
+            <h1>{{ .Title }}</h1>
+            <p><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Mon, Jan 2, 2006" }}</time></p>
+        </header>
+        <section>
+        {{ .Content }}
+        </section>
+      </article>
+    </main>
 
 {{ partial "footer.html" . -}}
