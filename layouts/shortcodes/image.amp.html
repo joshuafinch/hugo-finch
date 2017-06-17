@@ -1,4 +1,7 @@
-<figure width="{{ .Get "width" }}" height="{{ .Get "height" }}">
-<amp-img alt="{{ .Get "alt" }}" src="{{ .Get "src" }}" width="{{ .Get "width" }}" height="{{ .Get "height" }}" layout="responsive">
+<figure>
+  {{- $width := .Get "width" }}
+  <!-- if >= 700px, then handle as responsive, otherwise handle as fixed -->
+  {{- $responsive := ge $width 700 }}
+<amp-img alt="{{ .Get "alt" }}" src="{{ .Get "src" }}" width="{{ $width }}" height="{{ .Get "height" }}" layout="{{ if $responsive }}responsive{{ else }}fixed{{ end }}">
 </amp-img>
 </figure>
