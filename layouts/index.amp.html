@@ -9,9 +9,12 @@
 
         {{- range $paginator.Pages }}
 
+        {{ $amp := .OutputFormats.Get "amp" }}
+
         <article>
           <header>
-            <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+            <h1>
+              <a href="{{ $amp.RelPermalink }}">{{ .Title }}</a></h1>
           </header>
           {{- if .Summary }}
           <section>
@@ -20,7 +23,7 @@
           {{- end }}
           {{- if .Truncated }}
           <footer>
-            <a href="{{ .RelPermalink }}">Read More…</a>
+            <a href="{{ $amp.RelPermalink }}">Read more...</a>
           </footer>
           {{- end }}
         </article>
