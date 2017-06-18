@@ -4,14 +4,15 @@
 
     <main>
         <header>
-          <h1>{{ if not $paginator.HasPrev }}Latest Posts{{ else }}Previous Posts{{ end }}</h1>
+          <h1 class="title">{{ if not $paginator.HasPrev }}Latest Posts{{ else }}Previous Posts{{ end }}</h1>
         </header>
 
         {{- range $paginator.Pages }}
 
-        <article>
+        <article class="article-item">
           <header>
             <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+            <p><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time></p>
           </header>
           {{- if .Summary }}
           <section>

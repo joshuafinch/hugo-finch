@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+}
+
 .hll { background-color: #ffffcc }
 .c { color: #408080; font-style: italic } /* Comment */
 .err { border: 1px solid #FF0000 } /* Error */
@@ -81,14 +86,8 @@
 
 body {
   font-size: 16px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   line-height: 1.5em;
-}
-
-body > header, body > main, body > footer {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 0px 10px;
 }
 
 img {
@@ -98,4 +97,143 @@ img {
 
 figure {
   text-align: center;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+a, a:link, a:visited, a:hover, a:active, a:focus {
+  text-decoration: none;
+  color: #3F98A7;
+}
+
+.site-heading, body > main, .site-footer {
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 4em;
+  margin-bottom: 2em;
+  padding: 0px 10px;
+}
+
+.site-heading > p:last-child {
+  line-height: 0;
+}
+
+.title {
+  line-height: 1em;
+  font-weight: 300;
+  font-size: 2em;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.article-item {
+  margin-bottom: 2.5em;
+  margin-top: 0;
+}
+
+.article-item > header > h1 {
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 0px;
+  margin-top: 1rem;
+}
+
+.article-item > header > p {
+  font-weight: 600;
+  display: inline-block;
+  float: right;
+  color: #4E7178;
+  margin-top: 1rem;
+}
+
+.article-item > section > p:first-child {
+  margin-top: 0.5em;
+}
+
+.article-item > footer {
+  line-height: 0;
+  margin-top: 1.5em;
+}
+
+.site-footer a {
+  margin-left: 0.5em;
+}
+
+.site-footer a:first-child {
+  margin-left: 0;
+}
+
+.site-footer .logo {
+  background: transparent center top no-repeat;
+  background-image: url('/assets/finch-circle.svg');
+  background-size: 36px 36px;
+  width: 36px;
+  height: 36px;
+  display: inline-block;
+}
+
+.site-footer .logo:hover {
+  background-image: url('/assets/finch-circle-color.svg');
+}
+
+.site-footer .github {
+  background: transparent center top no-repeat;
+  background-image: url('/assets/github-circle.svg');
+  background-size: 36px 36px;
+  width: 36px;
+  height: 36px;
+  display: inline-block;
+}
+
+.site-footer .github:hover {
+  background-image: url('/assets/github-circle-color.svg');
+}
+
+.site-footer .rss {
+  background: transparent center top no-repeat;
+  background-image: url('/assets/rss-circle.svg');
+  background-size: 36px 36px;
+  width: 36px;
+  height: 36px;
+  display: inline-block;
+}
+
+.site-footer .rss:hover {
+  background-image: url('/assets/rss-circle-color.svg');
+}
+
+.site-footer span:first-child {
+  display: inline-block;
+  float: left;
+}
+
+.site-footer span:last-child {
+  display: inline-block;
+  float: right;
+}
+
+.site-footer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.article > header > h1 {
+  display: inline-block;
+  max-width: 80%;
+  line-height: 1.25em;
+}
+
+.article > header > p:last-child {
+  display: inline-block;
+  float: right;
+  line-height: 1em;
+  margin: 0;
+  margin-top: 1em;
+}
+
+.article > section > h2 {
+  margin-top: 2em;
+  font-weight: 400;
+  font-size: 1.5em;
 }
